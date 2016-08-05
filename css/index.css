@@ -1,0 +1,502 @@
+@font-face {
+    /* 我们将要定义的字体的名字 */
+    font-family: 'itcast';
+    /* 我们这个字体对应的字体文件 format是声明这个字体文件的格式  */
+    src: url(../fonts/MiFie-Web-Font.ttf) format("truetype"), url(../fonts/MiFie-Web-Font.svg) format("svg"), url(../fonts/MiFie-Web-Font.woff) format("woff");
+}
+
+
+/* 一定要记得使用字体图标首先得使用这个字体
+然后记得在伪元素里面加上这个图标对应的编码 */
+
+.icon-mobilephone::before {
+    font-family: 'itcast';
+    font-style: normal;
+    content: "\e908";
+}
+
+.icon-telephone::before {
+    font-family: 'itcast';
+    font-style: normal;
+    content: "\e909";
+}
+
+body {
+    font-family: "microsoft yahei";
+}
+
+
+/* 头部 */
+
+#header {}
+
+#header > .topbar {
+    border-bottom: 1px solid #c0c0c0;
+}
+
+#header > .topbar > .container {}
+
+#header > .topbar > .container >.row {
+    height: 40px;
+    line-height: 40px;
+    font-size: 12px;
+}
+
+#header > .topbar > .container >.row a {
+    color: #666;
+}
+
+#header > .topbar > .container >.row .mobile-link > img {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    margin-left: -60px;
+    display: none;
+    z-index: 9;
+}
+
+#header > .topbar > .container > .row .mobile-link:hover > img {
+    display: block;
+}
+
+#header > .topbar > .container > .row > div {
+    height: 40px;
+    border-left: 1px solid #ccc;
+}
+
+#header > .topbar > .container >.row > div:first-child {
+    border-left: 0 none;
+}
+
+.icon-icon:before {
+    font-family: 'itcast';
+    font-style: normal;
+    content: "\e920";
+    color: #e92322;
+    font-size: 55px;
+    vertical-align: middle;
+}
+
+.icon-logo:before {
+    font-family: 'itcast';
+    font-style: normal;
+    content: "\e93e";
+    color: #333;
+    font-size: 30px;
+    vertical-align: middle;
+}
+
+.navbar {
+    margin-bottom: 0;
+}
+
+.navbar-lyy {
+    height: 75px;
+}
+
+.navbar-lyy .navbar-brand {
+    color: #777;
+    line-height: 43px;
+    height: 75px;
+}
+
+.navbar-lyy .navbar-brand:hover,
+.navbar-lyy .navbar-brand:focus {
+    color: #5e5e5e;
+    background-color: transparent;
+}
+
+.navbar-lyy .navbar-text {
+    color: #777;
+}
+
+.navbar-lyy .navbar-nav > li > a {
+    color: #777;
+    line-height: 43px;
+}
+
+.navbar-lyy .navbar-nav > li > a:hover,
+.navbar-lyy .navbar-nav > li > a:focus {
+    /* color: #333; */
+    background-color: transparent;
+    border-bottom: 2px solid #e92322;
+}
+
+.navbar-lyy .navbar-nav > .active > a,
+.navbar-lyy .navbar-nav > .active > a:hover,
+.navbar-lyy .navbar-nav > .active > a:focus {
+    /* color: #555; */
+    /* background-color: #e7e7e7; */
+}
+
+.navbar-lyy .navbar-nav > .disabled > a,
+.navbar-lyy .navbar-nav > .disabled > a:hover,
+.navbar-lyy .navbar-nav > .disabled > a:focus {
+    /* color: #ccc;
+    background-color: transparent; */
+}
+
+.navbar-lyy .navbar-toggle {
+    border-color: #ddd;
+    margin-top: 24px;
+}
+
+.navbar-lyy .navbar-toggle:hover,
+.navbar-lyy .navbar-toggle:focus {
+    background-color: #ddd;
+}
+
+.navbar-lyy .navbar-toggle .icon-bar {
+    background-color: #888;
+}
+
+.navbar-lyy .navbar-collapse,
+.navbar-lyy .navbar-form {
+    border-color: #e7e7e7;
+}
+
+.navbar-lyy .navbar-nav > .open > a,
+.navbar-lyy .navbar-nav > .open > a:hover,
+.navbar-lyy .navbar-nav > .open > a:focus {
+    color: #555;
+    background-color: #e7e7e7;
+}
+
+@media (max-width: 767px) {
+    .navbar-lyy .navbar-nav .open .dropdown-menu > li > a {
+        color: #777;
+    }
+    .navbar-lyy .navbar-nav .open .dropdown-menu > li > a:hover,
+    .navbar-lyy .navbar-nav .open .dropdown-menu > li > a:focus {
+        color: #333;
+        background-color: transparent;
+    }
+    .navbar-lyy .navbar-nav .open .dropdown-menu > .active > a,
+    .navbar-lyy .navbar-nav .open .dropdown-menu > .active > a:hover,
+    .navbar-lyy .navbar-nav .open .dropdown-menu > .active > a:focus {
+        color: #555;
+        background-color: #e7e7e7;
+    }
+    .navbar-lyy .navbar-nav .open .dropdown-menu > .disabled > a,
+    .navbar-lyy .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+    .navbar-lyy .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+        color: #ccc;
+        background-color: transparent;
+    }
+}
+
+.navbar-lyy .navbar-link {
+    color: #777;
+}
+
+.navbar-lyy .navbar-link:hover {
+    color: #333;
+}
+
+.navbar-lyy .btn-link {
+    color: #777;
+}
+
+.navbar-lyy .btn-link:hover,
+.navbar-lyy .btn-link:focus {
+    color: #333;
+}
+
+.navbar-lyy .btn-link[disabled]:hover,
+fieldset[disabled] .navbar-lyy .btn-link:hover,
+.navbar-lyy .btn-link[disabled]:focus,
+fieldset[disabled] .navbar-lyy .btn-link:focus {
+    color: #ccc;
+}
+
+
+/* 轮播图 */
+
+#slide .carousel .item {
+    background-position: center center;
+}
+
+#slide .carousel .item img {
+	width: 100%;
+}
+
+@media (min-width: 768px) {
+    #slide .carousel .item {
+        height: 410px;
+    }
+}
+
+
+/* 特色介绍 */
+
+#feature > .container > .row {
+    padding: 30px 0;
+}
+
+#feature > .container > .row a {
+    color: #666;
+    text-decoration: none;
+}
+
+#feature > .container > .row a:hover {
+    color: #e92322;
+}
+
+#feature > .container > .row .media {
+    margin: 20px 0;
+}
+
+.icon-uniE907:before {
+    font-family: "itcast";
+    font-style: normal;
+    content: "\e907";
+    font-size: 27px;
+}
+
+
+/* 立即预约 */
+
+#booking {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    height: 56px;
+    line-height: 56px;
+    overflow: hidden;
+}
+
+#booking .pull-left p {
+    margin-bottom: 0;
+}
+
+#booking .pull-left a {
+    color: #e92322;
+    text-decoration: none;
+    border-bottom: 1px dashed #e92322;
+}
+
+#booking .pull-left span {
+    color: #e92322;
+}
+
+.icon-uniE906:before {
+    font-family: "itcast";
+    font-style: normal;
+    content: "\e906";
+}
+
+.icon-uniE905:before {
+    font-family: "itcast";
+    font-style: normal;
+    content: "\e905";
+}
+
+
+/* 产品推荐 */
+
+#products {
+    padding: 40px 0;
+    background-color: #f0f0f0;
+}
+
+#products .nav-tabs li a {
+    border: 0 none;
+    background-color: #f0f0f0;
+    font-size: 16px;
+    color: #555;
+}
+
+#products .nav-tabs .active > a {
+    border-bottom: 3px solid #e92322;
+}
+
+#products .tab-content {
+    padding: 20px 0;
+}
+
+#products .tab-content .panel-heading {
+    float: right;
+    width: 120px;
+    height: 160px;
+    border-left: 1px dashed #ccc;
+    border-bottom: 0 none;
+    position: relative;
+    background-color: #fff;
+}
+
+#products .tab-content .panel-heading:before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -8px;
+    left: -8px;
+}
+
+#products .tab-content .panel-heading:after {
+    content: "";
+    width: 16px;
+    height: 16px;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    position: absolute;
+    top: -8px;
+    left: -8px;
+}
+
+#products .tab-content .row .panel-default.red > .panel-heading {
+    background-color: #e92322;
+    color: #fff;
+}
+
+#products .tab-content .row .panel-default.red > .panel-body {
+    background-color: #e92322;
+    color: #fff;
+}
+
+.panel-default.red:before {
+    font-family: "itcast";
+    content: "\e915";
+    position: absolute;
+    font-size: 40px;
+    color: #fff;
+    top: -9px;
+}
+
+#products .tab-content .panel-heading .panel-title {
+    text-align: center;
+    padding-top: 40px;
+}
+
+#products .tab-content .panel-heading .panel-title strong {
+    font-size: 30px;
+}
+
+#products .tab-content .panel-body {
+    margin-right: 120px;
+    height: 160px;
+}
+
+#products .tab-content .panel-body .row .col-xs-6 {
+    margin: 5px 0;
+}
+
+#products .tab-content .panel-body .row p {
+    margin: 0;
+}
+
+#news {
+    padding: 40px 0;
+}
+
+#news .row .col-md-1 .nav-tabs {
+    border: 0 none;
+}
+
+#news .row h4 {
+    border-bottom: 1px dashed #ccc;
+    padding: 20px 0;
+    position: relative;
+}
+
+#news .row h4:after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -5px;
+    right: -10px;
+}
+
+#news .row .col-md-1 ul>li>a {
+    border-radius: 30px;
+}
+
+#news .row .col-md-1 .active a {
+    background-color: #e92322;
+}
+
+#news .row .col-md-1 ul>li {
+    padding: 10px 0;
+}
+
+#news .row .col-md-1 ul li i {
+    display: block;
+    font-style: normal;
+}
+
+.icon-news01:before {
+    font-family: "itcast";
+    content: "\e90e";
+    font-size: 28px;
+    color: #eaeaea;
+}
+
+.icon-news02:before {
+    font-family: "itcast";
+    content: "\e90f";
+    font-size: 28px;
+    color: #eaeaea;
+}
+
+.icon-news03:before {
+    font-family: "itcast";
+    content: "\e910";
+    font-size: 28px;
+    color: #eaeaea;
+}
+
+.icon-news04:before {
+    font-family: "itcast";
+    content: "\e911";
+    font-size: 28px;
+    color: #eaeaea;
+}
+
+#news .row .tab-content ul {
+    list-style: none;
+}
+
+#news .row .tab-content ul li {
+    padding: 10px 0;
+    font-size: 16px;
+}
+
+.icon-uniE931:before {
+    font-family: "itcast";
+    content: "\e931";
+    font-size: 50px;
+}
+
+#partner {
+    padding: 20px 0;
+}
+
+#partner > .container ul {
+    font-size: 0;
+}
+
+#partner .container ul > li {
+    list-style: none;
+    display: inline-block;
+    width: calc(100%/9);
+    text-align: center;
+    border-left: 1px dashed #c0c0c0;
+    height: 60px;
+}
+
+#partner .container ul > li:first-child {
+    border-left: 0 none;
+}
+
+#partner .container ul li a {
+    text-decoration: none;
+    color: #666;
+}
+
+#partner .container ul li a:hover {
+    color: #e92322;
+}
